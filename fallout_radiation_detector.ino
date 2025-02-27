@@ -154,7 +154,7 @@ void loop() {
     failedScan = false;
 
 
-    if (device_found == true)
+    if (device_found == true) 
     {
         // Do some math on RSSI to determine how much to add to radiation level
         // want really high RSSI to quickly increase radiation level
@@ -170,6 +170,11 @@ void loop() {
         } 
     }
 
+  // Flash most recent LED
+  digitalWrite(radiationPins[0], HIGH);
+  delay(100);
+  digitalWrite(radiationPins[0], LOW);
+  delay(100);
 
 
 
